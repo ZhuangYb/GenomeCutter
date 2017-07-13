@@ -2,21 +2,41 @@ GenomeCutter version 0.01
 ==============================
 
 INSTALLATION
-This is a stand alone perl script used for get fragment size distribution of single/double enzyme cutting.
+This is a stand alone perl script used for estimating fragment size distribution of single/double enzyme cutting.
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
 Copyright (C) 2016 by Yongbin Zhuang (happye321@gmail.com)
 
-This library is free software; you can redistribute it and/or modify
+This  is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.18.2 or,
 at your option, any later version of Perl 5 you may have available.
 
 Notice:
 If you have miniconda installed, make sure,in your $PATH variable, /usr/bin/perl is before   the dir of minicoda/bin/
 
+METHODOLOGY
+EnzymeI recognization site: AA|TT
+EnzymeII recognization site: GA|TC
+Example:
+        cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccAATTcccccGATC
+             ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ---- 
+               I1      I2       II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
+Radseq:
+  AATT: 
+        ------  -------  ----------------  -------------------------  -------------------------  -------  ----------
+          L1       L2            L3                    L4                         L5                 L6        L7
+  # of Enzyme cutting site: 6
+  Average length= sum(L1..L7)/7
+  
+ddRADseq
+        cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccAATTcccccGATC
+             ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ---- 
+               I1      I2       II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
+AATT+GATC:               -------  -------  -------            ------  -------           -------           -------  
+                            L1       L2        L3                L4      L5                L6                L7
+  #of fragements with two enzyme recognization sites: 7
+  Average length= sum(L1..L7)/7                         
 ===================================================================================
 usage
 ===================================================================================
