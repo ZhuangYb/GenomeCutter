@@ -20,25 +20,26 @@ EnzymeI recognization site: AATT
 EnzymeII recognization site: GATC
 Example:
 Radseq:
-              I1       I2                I3                         I4                         I5       I6      
-        cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccAATTcccccGATC
-             ----     ----              ----                       ----                       ----     ----          
- AATT:  ------  -------  ----------------  -------------------------  -------------------------  -------  ----------
-          L1       L2            L3                    L4                         L5                 L6        L7
-  # of Enzyme cutting site: 6
-  Average length= sum(L1..L7)/7
+              I1       I2                I3                         I4                         I5            
+        cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccc
+             ----     ----              ----                       ----                       ----         
+ AATT:  ------  -------  ----------------  -------------------------  -------------------------  -----
+          L1       L2            L3                    L4                         L5               L6       
+  # of Enzyme cutting site: 5
+  Average length= sum(L1..L6)/6
   
 ddRADseq
-              I1       I2      II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
-        cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccAATTcccccGATC
-             ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ---- 
-AATT+GATC:               -------  -------  -------            ------  -------           -------           -------  
-                            L1       L2        L3                L4      L5                L6                L7
-  #of fragements with two enzyme recognization sites: 7
-  Average length= sum(L1..L7)/7                         
+              I1       I2      II1      I3       II2      II3      I4       II4      II5      I5        
+        cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTccccc
+             ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     
+AATT+GATC:               -------  -------  -------            ------  -------           -------             
+                            L1       L2        L3                L4      L5                L6                
+  #of fragements with two enzyme recognization sites: 6
+  Average length= sum(L1..L6)/6                         
 ===================================================================================
 usage
 ===================================================================================
-perl  GenomeCutter.pl Enzyme.list.txt genome.fasta -Min 2000 (the minimum length of contig used for enzyme cutting)
+perl  GenomeCutter.pl Enzyme.list.txt genome.fasta -Min 2000 
+-min  the minimum length of contig used for enzyme cutting
 ===================================================================================
 
