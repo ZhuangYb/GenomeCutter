@@ -12,8 +12,27 @@ This  is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.18.2 or,
 at your option, any later version of Perl 5 you may have available.
 
-Notice:
-If you have miniconda installed, make sure,in your $PATH variable, /usr/bin/perl is before   the dir of minicoda/bin/
+METHODOLOGY
+EnzymeI  recognization site: AATT
+EnzymeII recognization site: GATC
+Example:
+Radseq(AATT):
+      I1       I2                I3                         I4                         I5            
+cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccc
+     ----     ----              ----                       ----                       ----         
+------  -------  ----------------  -------------------------  -------------------------  -----
+  L1       L2            L3                    L4                         L5               L6       
+# of Enzyme cutting site: 5
+Average length= sum(L1..L6)/6
+  
+ddRADseq(AATT+GATC)
+      I1       I2      II1      I3       II2      II3      I4       II4      II5      I5        
+cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccc
+     ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     
+        -------  -------  -------            ------  -------           -------             
+        L1       L2        L3                L4      L5                L6                
+#of fragements with two enzyme recognization sites: 6
+Average length= sum(L1..L6)/6    
 
 METHODOLOGY
 EnzymeI  recognization site: AATT
