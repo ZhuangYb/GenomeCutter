@@ -19,20 +19,19 @@ METHODOLOGY
 EnzymeI recognization site: AA|TT
 EnzymeII recognization site: GA|TC
 Example:
+Radseq:
+              I1       I2      II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
         cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccAATTcccccGATC
              ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ---- 
-               I1      I2       II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
-Radseq:
-  AATT: 
-        ------  -------  ----------------  -------------------------  -------------------------  -------  ----------
+ AATT:  ------  -------  ----------------  -------------------------  -------------------------  -------  ----------
           L1       L2            L3                    L4                         L5                 L6        L7
   # of Enzyme cutting site: 6
   Average length= sum(L1..L7)/7
   
 ddRADseq
+              I1       I2      II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
         cccccAATTcccccAATTcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccGATCcccccGATCcccccAATTcccccAATTcccccGATC
              ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ----     ---- 
-               I1      I2       II1      I3       II2      II3      I4       II4      II5      I5        I6      II6
 AATT+GATC:               -------  -------  -------            ------  -------           -------           -------  
                             L1       L2        L3                L4      L5                L6                L7
   #of fragements with two enzyme recognization sites: 7
