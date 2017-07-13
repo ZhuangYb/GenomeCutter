@@ -1,0 +1,25 @@
+GenomeCutter version 0.01
+==============================
+
+INSTALLATION
+This is a stand alone perl script used for get fragment size distribution of single/double enzyme cutting.
+
+COPYRIGHT AND LICENCE
+
+Put the correct copyright and licence information here.
+
+Copyright (C) 2016 by Yongbin Zhuang (happye321@gmail.com)
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.18.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+Notice:
+If you have miniconda installed, make sure,in your $PATH variable, /usr/bin/perl is before   the dir of minicoda/bin/
+
+===================================================================================
+usage
+===================================================================================
+perl  GenomeCutter.pl Enzyme.list.txt genome.fasta -Min 2000 (the minimum length of contig used for enzyme cutting)
+===================================================================================
+
